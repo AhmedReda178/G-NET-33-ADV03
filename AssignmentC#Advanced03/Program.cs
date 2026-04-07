@@ -88,6 +88,65 @@
             //}
 
             #endregion
+
+            #region Exercise 2: Leaderboard
+
+            ////Create a leaderboard that automatically sorts players by score.
+
+            //// 1. Create leaderboard using SortedDictionary<int, string>
+
+            //SortedDictionary<int, string> leaderboard = new SortedDictionary<int, string>();
+
+            //// 2. Add players
+            //leaderboard.Add(500, "Ahmed");
+            //leaderboard.Add(200, "Sara");
+            //leaderboard.Add(800, "Ali");
+            //leaderboard.Add(350, "Mona");
+
+            //// 3. Print all entries (automatically sorted by score)
+            //Console.WriteLine("Leaderboard (sorted by score):");
+            //foreach (var entry in leaderboard)
+            //{
+            //    Console.WriteLine("Score: " + entry.Key + ", Player: " + entry.Value);
+            //}
+
+            //// 4. Access first key and first value
+            //int firstScore = 0;
+            //string firstPlayer = "";
+            //foreach (var entry in leaderboard)
+            //{
+            //    firstScore = entry.Key;
+            //    firstPlayer = entry.Value;
+            //    break; // first element only
+            //}
+            //Console.WriteLine($"First score: {firstScore}, First player: {firstPlayer}");
+
+            //// 5. Check if score 500 exists
+            //bool has500 = leaderboard.ContainsKey(500);
+            //Console.WriteLine("Does score 500 exist? " + has500);
+
+            //// 6. Safely get player with score 999
+            //string player999;
+            //if (leaderboard.TryGetValue(999, out player999))
+            //{
+            //    Console.WriteLine("Player with score 999: " + player999);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No player with score 999 found.");
+            //}
+
+            //// 7. Remove player with score 200
+            //bool removed = leaderboard.Remove(200);
+            //Console.WriteLine("Removed score 200? " + removed);
+
+            //// Print updated leaderboard
+            //Console.WriteLine("Updated Leaderboard:");
+            //foreach (var entry in leaderboard)
+            //{
+            //    Console.WriteLine("Score: " + entry.Key + ", Player: " + entry.Value);
+            //}
+            #endregion
         }
     }
 }
