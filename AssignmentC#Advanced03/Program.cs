@@ -301,6 +301,50 @@
             //if (!success)
             //    Console.WriteLine("Queue is empty, nothing to dequeue.");
             #endregion
+
+            #region Exercise 6: Browser History (Undo)
+
+            ////Simulate browser back/forward 
+
+            //// 1. Create Stack<string> for browser history
+            //Stack<string> history = new Stack<string>();
+
+            //// 2. Push 5 URLs
+            //history.Push("google.com");
+            //history.Push("github.com");
+            //history.Push("stackoverflow.com");
+            //history.Push("youtube.com");
+            //history.Push("claude.ai");
+
+            //// 3. Peek at current page
+            //if (history.Count > 0)
+            //    Console.WriteLine("Current page: " + history.Peek());
+
+            //// 4. Press "back" 3 times using Pop
+            //Console.WriteLine("Going back 3 pages:");
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    if (history.Count > 0)
+            //    {
+            //        string leftPage = history.Pop();
+            //        Console.WriteLine("Left page: " + leftPage);
+            //    }
+            //}
+
+            //// 5. Current page after going back
+            //if (history.Count > 0)
+            //    Console.WriteLine("Current page now: " + history.Peek());
+            //else
+            //    Console.WriteLine("No pages left in history.");
+
+            //// 6. Try TryPop on empty stack
+            //Stack<string> emptyStack = new Stack<string>();
+            //string poppedPage;
+            //bool success = emptyStack.TryPop(out poppedPage);
+            //Console.WriteLine("TryPop on empty stack succeeded? " + success);
+            //if (!success)
+            //    Console.WriteLine("Stack is empty, nothing to pop.");
+            #endregion
         }
     }
 }
