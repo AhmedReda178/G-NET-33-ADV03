@@ -263,6 +263,44 @@
             //bool isSubset = subset.IsSubsetOf(setA);
             //Console.WriteLine("{1,2} is subset of A? " + isSubset);
             #endregion
+
+            #region Exercise 5: Print Queue Simulator
+
+            ////Simulate a printer queue
+
+            //// 1. Create Queue<string> and enqueue 5 documents
+            //Queue<string> printQueue = new Queue<string>();
+            //printQueue.Enqueue("Report.pdf");
+            //printQueue.Enqueue("Invoice.pdf");
+            //printQueue.Enqueue("Letter.docx");
+            //printQueue.Enqueue("Resume.pdf");
+            //printQueue.Enqueue("Photo.jpg");
+
+            //// 2. Print queue contents and count
+            //Console.WriteLine("Queue contents:");
+            //foreach (var doc in printQueue)
+            //    Console.WriteLine(doc);
+            //Console.WriteLine("Count: " + printQueue.Count);
+
+            //// 3. Peek at next document
+            //if (printQueue.Count > 0)
+            //    Console.WriteLine("Next document to print: " + printQueue.Peek());
+
+            //// 4. Process the queue
+            //Console.WriteLine("Processing the queue:");
+            //while (printQueue.Count > 0)
+            //{
+            //    string doc = printQueue.Dequeue();
+            //    Console.WriteLine("Printing: " + doc);
+            //}
+
+            //// 5. Try TryDequeue on empty queue
+            //string nextDoc;
+            //bool success = printQueue.TryDequeue(out nextDoc);
+            //Console.WriteLine("TryDequeue on empty queue succeeded? " + success);
+            //if (!success)
+            //    Console.WriteLine("Queue is empty, nothing to dequeue.");
+            #endregion
         }
     }
 }
