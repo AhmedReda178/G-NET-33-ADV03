@@ -150,62 +150,118 @@
 
             #region Exercise 3: Phone Book
 
-        //    // 1. Create phone book with 4 contacts
-        //    Dictionary<string, string> phoneBook = new Dictionary<string, string>
-        //{
-        //    { "Ahmed", "01011112222" },
-        //    { "Sara", "01033334444" },
-        //    { "Ali", "01055556666" },
-        //    { "Mona", "01077778888" }
-        //};
+            //    // 1. Create phone book with 4 contacts
+            //    Dictionary<string, string> phoneBook = new Dictionary<string, string>
+            //{
+            //    { "Ahmed", "01011112222" },
+            //    { "Sara", "01033334444" },
+            //    { "Ali", "01055556666" },
+            //    { "Mona", "01077778888" }
+            //};
 
-        //    // 2. Add a new contact using [] syntax (add or update)
-        //    phoneBook["Hassan"] = "01099990000"; // add new
-        //    phoneBook["Sara"] = "01012345678";   // update existing
+            //    // 2. Add a new contact using [] syntax (add or update)
+            //    phoneBook["Hassan"] = "01099990000"; // add new
+            //    phoneBook["Sara"] = "01012345678";   // update existing
 
-        //    // 3. Try adding a duplicate using .Add() — catch exception
-        //    try
-        //    {
-        //        phoneBook.Add("Ahmed", "01100001111"); // duplicate key
-        //    }
-        //    catch (ArgumentException ex)
-        //    {
-        //        Console.WriteLine("Error adding duplicate with Add(): " + ex.Message);
-        //    }
+            //    // 3. Try adding a duplicate using .Add() — catch exception
+            //    try
+            //    {
+            //        phoneBook.Add("Ahmed", "01100001111"); // duplicate key
+            //    }
+            //    catch (ArgumentException ex)
+            //    {
+            //        Console.WriteLine("Error adding duplicate with Add(): " + ex.Message);
+            //    }
 
-        //    // 4. Try adding a duplicate using .TryAdd()
-        //    bool added = phoneBook.TryAdd("Ali", "01222223333"); // duplicate key
-        //    Console.WriteLine("Adding duplicate with TryAdd() succeeded? " + added);
+            //    // 4. Try adding a duplicate using .TryAdd()
+            //    bool added = phoneBook.TryAdd("Ali", "01222223333"); // duplicate key
+            //    Console.WriteLine("Adding duplicate with TryAdd() succeeded? " + added);
 
-        //    bool addedNew = phoneBook.TryAdd("Laila", "01044445555"); // new key
-        //    Console.WriteLine("Adding new contact with TryAdd() succeeded? " + addedNew);
+            //    bool addedNew = phoneBook.TryAdd("Laila", "01044445555"); // new key
+            //    Console.WriteLine("Adding new contact with TryAdd() succeeded? " + addedNew);
 
-        //    // 5. Search for a contact that doesn’t exist
-        //    string searchName = "Youssef";
-        //    if (phoneBook.ContainsKey(searchName))
-        //    {
-        //        Console.WriteLine(searchName + "'s number: " + phoneBook[searchName]);
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine(searchName + " not found.");
-        //    }
+            //    // 5. Search for a contact that doesn’t exist
+            //    string searchName = "Youssef";
+            //    if (phoneBook.ContainsKey(searchName))
+            //    {
+            //        Console.WriteLine(searchName + "'s number: " + phoneBook[searchName]);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(searchName + " not found.");
+            //    }
 
-        //    // 6. Get a contact with fallback "Not Found"
-        //    string number = phoneBook.ContainsKey("Khaled") ? phoneBook["Khaled"] : "Not Found";
-        //    Console.WriteLine("Khaled's number: " + number);
+            //    // 6. Get a contact with fallback "Not Found"
+            //    string number = phoneBook.ContainsKey("Khaled") ? phoneBook["Khaled"] : "Not Found";
+            //    Console.WriteLine("Khaled's number: " + number);
 
-        //    // 7. Print all keys on one line
-        //    Console.Write("All names: ");
-        //    foreach (var name in phoneBook.Keys)
-        //        Console.Write(name + " ");
-        //    Console.WriteLine();
+            //    // 7. Print all keys on one line
+            //    Console.Write("All names: ");
+            //    foreach (var name in phoneBook.Keys)
+            //        Console.Write(name + " ");
+            //    Console.WriteLine();
 
-        //    // 8. Print all values on one line
-        //    Console.Write("All numbers: ");
-        //    foreach (var phone in phoneBook.Values)
-        //        Console.Write(phone + " ");
-        //    Console.WriteLine();
+            //    // 8. Print all values on one line
+            //    Console.Write("All numbers: ");
+            //    foreach (var phone in phoneBook.Values)
+            //        Console.Write(phone + " ");
+            //    Console.WriteLine();
+            #endregion
+
+
+            #region Exercise 4: Unique Email Validator
+
+            ////Use Collection to manage unique email addresses.
+
+            //// 1. Create HashSet with case-insensitive comparer
+            //HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+            //// 2. Add emails
+            //emails.Add("ahmed@test.com");
+            //emails.Add("AHMED@test.com"); // duplicate, ignored because of case-insensitive
+            //emails.Add("sara@test.com");
+            //emails.Add("Sara@Test.Com");   // duplicate, ignored because of case-insensitive
+
+            //// 3. Print Count
+            //Console.WriteLine("Number of unique emails: " + emails.Count);
+            //Console.WriteLine("Explanation: Duplicate emails with different cases are ignored due to case-insensitive HashSet.");
+
+            //Console.WriteLine("Stored emails:");
+            //foreach (var email in emails)
+            //    Console.WriteLine(email);
+
+            //// 4. Create sets A and B
+            //HashSet<int> setA = new HashSet<int> { 1, 2, 3, 4, 5 };
+            //HashSet<int> setB = new HashSet<int> { 4, 5, 6, 7, 8 };
+
+            //// 5. UnionWith
+            //HashSet<int> unionSet = new HashSet<int>(setA);
+            //unionSet.UnionWith(setB);
+            //Console.Write("Union of A and B: ");
+            //foreach (var n in unionSet)
+            //    Console.Write(n + " ");
+            //Console.WriteLine();
+
+            //// 6. IntersectWith
+            //HashSet<int> intersectSet = new HashSet<int>(setA);
+            //intersectSet.IntersectWith(setB);
+            //Console.Write("Intersection of A and B: ");
+            //foreach (var n in intersectSet)
+            //    Console.Write(n + " ");
+            //Console.WriteLine();
+
+            //// 7. ExceptWith
+            //HashSet<int> exceptSet = new HashSet<int>(setA);
+            //exceptSet.ExceptWith(setB);
+            //Console.Write("A except B: ");
+            //foreach (var n in exceptSet)
+            //    Console.Write(n + " ");
+            //Console.WriteLine();
+
+            //// 8. IsSubsetOf
+            //HashSet<int> subset = new HashSet<int> { 1, 2 };
+            //bool isSubset = subset.IsSubsetOf(setA);
+            //Console.WriteLine("{1,2} is subset of A? " + isSubset);
             #endregion
         }
     }
